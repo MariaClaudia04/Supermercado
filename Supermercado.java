@@ -21,7 +21,7 @@ public class Supermercado {
         Producto queso = new Producto("Queso", 3.00, 1500);
         Producto manzana = new Producto("Manzana", 0.50, 500);
         Producto carne = new Producto("Carne", 5.00, 2000);
-        // Crear listas de productos para cada cliente
+        
         List<Producto> productosCliente1 = new ArrayList<>();
         productosCliente1.add(leche);
         productosCliente1.add(pan);
@@ -34,15 +34,15 @@ public class Supermercado {
         productosCliente3.add(manzana);
         productosCliente3.add(pan);
         
-         // Crear clientes
+         
         Cliente cliente1 = new Cliente("Cliente 1", productosCliente1);
         Cliente cliente2 = new Cliente("Cliente 2", productosCliente2);
         Cliente cliente3 = new Cliente("Cliente 3", productosCliente3);
-        // Crear cajeras y asignarles clientes
+        
         Cajera cajera1 = new Cajera("Sandra", cliente1);
         Cajera cajera2 = new Cajera("Martha", cliente2);
         Cajera cajera3 = new Cajera("Ana", cliente3);
-        // Iniciar el proceso concurrente
+        
         long tiempoTotalSimulacionInicio = System.currentTimeMillis();
         cajera1.start();
         cajera2.start();
